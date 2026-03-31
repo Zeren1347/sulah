@@ -1,0 +1,247 @@
+.local-contact-form {
+  display: block;
+}
+
+.local-contact-card {
+  border: 1px solid rgba(12, 17, 43, 0.12);
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 18px 48px rgba(12, 17, 43, 0.08);
+  padding: 28px;
+}
+
+.local-form-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.local-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.local-form-field span {
+  font-weight: 600;
+  color: #101828;
+}
+
+.local-form-field--full {
+  grid-column: 1 / -1;
+}
+
+.local-contact-form input,
+.local-contact-form textarea {
+  width: 100%;
+  border: 1px solid rgba(12, 17, 43, 0.16);
+  border-radius: 14px;
+  background: #ffffff;
+  padding: 14px 16px;
+  color: #101828;
+}
+
+.local-contact-form textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+
+.local-phone-field {
+  display: flex;
+  align-items: stretch;
+  border: 1px solid rgba(12, 17, 43, 0.16);
+  border-radius: 14px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.local-phone-prefix {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 16px;
+  background: #f8fafc;
+  border-right: 1px solid rgba(12, 17, 43, 0.12);
+  color: #344054;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.local-phone-field input {
+  border: 0;
+  border-radius: 0;
+}
+
+.local-phone-field input:focus {
+  outline: none;
+}
+
+.local-form-help {
+  margin: 0;
+  color: #667085;
+  font-size: 0.9rem;
+}
+
+.local-form-actions {
+  display: grid;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.local-form-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-width: 220px;
+  border: 0;
+  border-radius: 999px;
+  background: #111c44;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 14px 26px;
+  transition: background-color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+}
+
+.local-form-submit:hover {
+  background: #0b1431;
+  transform: translateY(-1px);
+}
+
+.local-form-submit:disabled {
+  cursor: wait;
+  opacity: 0.72;
+  transform: none;
+}
+
+.local-form-note,
+.local-form-status {
+  margin: 0;
+  color: #475467;
+}
+
+.local-form-status {
+  color: #14532d;
+  font-weight: 600;
+}
+
+.local-form-status--error {
+  color: #b42318;
+}
+
+.local-form-gotcha {
+  display: none !important;
+}
+
+.local-standalone-page {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(17, 28, 68, 0.14), transparent 34%),
+    linear-gradient(180deg, #f4f7fb 0%, #eef2f8 100%);
+  color: #101828;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.local-standalone-shell {
+  width: min(100%, 760px);
+  margin: 0 auto;
+  padding: 48px 20px;
+}
+
+.local-standalone-card {
+  border: 1px solid rgba(12, 17, 43, 0.1);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 26px 70px rgba(12, 17, 43, 0.12);
+  padding: 28px;
+}
+
+.local-standalone-brand {
+  display: inline-flex;
+  margin-bottom: 18px;
+}
+
+.local-standalone-brand img {
+  width: 132px;
+  height: auto;
+}
+
+.local-standalone-kicker {
+  margin: 0 0 10px;
+  color: #475467;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.local-standalone-card h1 {
+  margin: 0 0 12px;
+  color: #111c44;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+}
+
+.local-standalone-intro,
+.local-standalone-meta {
+  margin: 0 0 20px;
+  color: #475467;
+  line-height: 1.6;
+}
+
+.local-standalone-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.local-standalone-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  border-radius: 999px;
+  background: #111c44;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 14px 22px;
+  text-decoration: none;
+}
+
+.local-standalone-link--secondary {
+  background: #dbe4f0;
+  color: #111c44;
+}
+
+@media (max-width: 768px) {
+  .local-contact-card {
+    padding: 22px;
+  }
+
+  .local-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .local-form-field--full {
+    grid-column: auto;
+  }
+
+  .local-form-submit {
+    width: 100%;
+  }
+
+  .local-standalone-card {
+    padding: 22px;
+  }
+
+  .local-standalone-shell {
+    padding: 28px 16px;
+  }
+
+  .local-standalone-actions,
+  .local-standalone-link {
+    width: 100%;
+  }
+}
