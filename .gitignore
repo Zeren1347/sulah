@@ -1,0 +1,37 @@
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor folders
+.vscode/
+.idea/
+
+# Logs and temp files
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# Environment and local secret files
+.env
+.env.*
+!.env.example
+*.local
+
+# Dependency/build caches
+node_modules/
+coverage/
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+
+# Python caches
+__pycache__/
+*.pyc
+
+# PowerShell local output
+*.ps1.xml
